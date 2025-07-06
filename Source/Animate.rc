@@ -1,0 +1,541 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 387, 186
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About Animate"
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,10,5,20,20
+    LTEXT           "Animate Version 1.0",IDC_STATIC,40,10,70,8,SS_NOPREFIX
+    DEFPUSHBUTTON   "OK",IDOK,345,5,32,14,WS_GROUP
+    LTEXT           "Copyright (C) 1999,  Paul Tinsley\nCoded using Microsoft Visual C++ 5.00 (TM)",
+                    IDC_STATIC2,115,10,215,20
+    CONTROL         137,IDC_STATIC,"Static",SS_BITMAP | SS_REALSIZEIMAGE | 
+                    SS_SUNKEN | WS_BORDER,5,35,162,144
+    LTEXT           "Paul Tinsley is an undergraduate computer scientist at Essex University. He is currently studying for a BSc in Computer Science (Artificial Intelligence) that will complete in July 1999.",
+                    IDC_STATIC,175,40,205,30,SS_SUNKEN | NOT WS_GROUP
+    LTEXT           "This program was developed for a 3rd Year Project investigating the emergent properties of multi-agent systems. The agents are simple reflex agents with internal state and do not possess any communication or planning functionality.",
+                    IDC_STATIC,175,80,205,35,SS_SUNKEN | NOT WS_GROUP
+    LTEXT           "User Interface was not a feature for this software project. Therefore, no user help facilities exist and there are no instruction manuals.\n\nThis is Paul's first Windows 95/98 application.",
+                    IDC_STATIC,175,125,205,50,SS_SUNKEN
+END
+
+IDD_ANIMATE_DIALOG DIALOGEX 0, 0, 532, 343
+STYLE DS_MODALFRAME | DS_3DLOOK | WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_POPUP | 
+    WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "Animate"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "",IDC_STATIC,5,0,270,255
+    GROUPBOX        "Animation Playback Controls",IDC_STATIC,280,5,245,80,
+                    BS_CENTER
+    CONTROL         "Play",IDC_PLAY,"Button",BS_OWNERDRAW | WS_TABSTOP,290,
+                    20,25,20
+    CONTROL         "Stop",IDC_STOP,"Button",BS_OWNERDRAW,320,20,25,20
+    CONTROL         "Step_f",IDC_STEP_F,"Button",BS_OWNERDRAW,350,20,25,20
+    CONTROL         "Step_b",IDC_STEP_B,"Button",BS_OWNERDRAW,380,20,25,20
+    CONTROL         "Reset_b",IDC_RESET,"Button",BS_OWNERDRAW,410,20,25,20
+    CONTROL         "Reset_f",IDC_RESET_END,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,440,20,25,20
+    CONTROL         "Path",IDC_BUTTON_PATHS,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,490,20,25,20
+    CONTROL         "Slider1",IDC_SLIDER_SPEED,"msctls_trackbar32",
+                    TBS_AUTOTICKS | WS_TABSTOP,290,45,225,15
+    EDITTEXT        IDC_EDIT_FRAME_GET,340,65,25,12,ES_CENTER | 
+                    ES_AUTOHSCROLL
+    CONTROL         "Jump",IDC_BUTTON_JUMP,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,375,65,15,15
+    GROUPBOX        "Scenario Administration",IDC_STATIC,280,90,245,205,
+                    BS_CENTER
+    LTEXT           "Max Turns",IDC_STATIC,290,105,35,10,NOT WS_GROUP
+    EDITTEXT        IDC_EDIT_TURNS,335,105,25,10,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "Max Iterations",IDC_STATIC,370,105,45,10,NOT WS_GROUP
+    EDITTEXT        IDC_EDIT_ITER,420,105,25,10,ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "Environment Map",IDC_STATIC,290,120,55,10,NOT WS_GROUP
+    EDITTEXT        IDC_EDIT_SCENARIO_MAP,350,120,165,12,ES_AUTOHSCROLL
+    CONTROL         "Agents Explore",IDC_CHECK_EXPLORE,"Button",
+                    BS_AUTOCHECKBOX | BS_LEFTTEXT | WS_TABSTOP,455,105,65,10
+    GROUPBOX        "Scenario Type",IDC_STATIC,440,135,80,80,BS_CENTER
+    CONTROL         "Basic Mining",IDC_RADIO_SC1,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP | WS_TABSTOP,445,150,65,10
+    CONTROL         "Chain Mining",IDC_RADIO_SC2,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,445,165,65,10
+    CONTROL         "Predators + Prey",IDC_RADIO_SC3,"Button",
+                    BS_AUTORADIOBUTTON | WS_TABSTOP,445,180,65,10
+    CONTROL         "Crowd Dynamics",IDC_RADIO_SC4,"Button",
+                    BS_AUTORADIOBUTTON | WS_TABSTOP,445,195,65,10
+    GROUPBOX        "Agent Characteristics",IDC_STATIC,285,135,150,110,
+                    BS_CENTER
+    GROUPBOX        "",IDC_STATIC,380,145,50,60
+    CONTROL         "Miner",IDC_RADIO_AGENT_TYPE,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,385,155,35,10
+    CONTROL         "Predator",IDC_RADIO_PREDATORS,"Button",
+                    BS_AUTORADIOBUTTON | WS_TABSTOP,385,170,40,10
+    CONTROL         "Prey",IDC_RADIO_PREY,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,385,185,35,10
+    LTEXT           "Agents",IDC_STATIC,295,150,25,10,NOT WS_GROUP
+    EDITTEXT        IDC_EDIT_AGENT_NO,345,150,30,10,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    LTEXT           "Visual Range",IDC_STATIC,295,165,45,10,NOT WS_GROUP
+    EDITTEXT        IDC_EDIT_VIS_RANGE,345,165,30,10,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    LTEXT           "Grab Capacity",IDC_STATIC,295,180,45,10,NOT WS_GROUP
+    EDITTEXT        IDC_EDIT_GRAB_CAP,345,180,30,10,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    LTEXT           "Sack Capacity",IDC_STATIC,295,195,50,10,NOT WS_GROUP
+    EDITTEXT        IDC_EDIT_SACK_CAP,345,195,30,10,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    CONTROL         "Load",IDC_LOAD,"Button",BS_OWNERDRAW | WS_TABSTOP,285,
+                    255,25,20
+    CONTROL         "Save",IDC_SAVE,"Button",BS_OWNERDRAW | WS_TABSTOP,320,
+                    255,25,20
+    CONTROL         "Map",IDC_MAP_EDITOR,"Button",BS_OWNERDRAW | WS_TABSTOP,
+                    355,255,25,20
+    CONTROL         "Run",IDC_RUN_SCENARIO,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,390,255,25,20
+    CONTROL         "Runa",IDC_RUN_ANIMATE,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,425,255,25,20
+    CONTROL         "Pause",IDC_PAUSE,"Button",BS_OWNERDRAW | WS_TABSTOP,460,
+                    255,25,20
+    CONTROL         "Kill",IDC_KILL,"Button",BS_OWNERDRAW | WS_TABSTOP,495,
+                    255,25,20
+    CONTROL         "Progress1",IDC_PROGRESS_SCEN,"msctls_progress32",
+                    WS_BORDER,285,280,235,10,WS_EX_CLIENTEDGE
+    GROUPBOX        "Agent Radio Tagging",IDC_STATIC,280,300,245,35,
+                    BS_CENTER
+    CTEXT           "Ac",IDC_TEXT_AGENT_ACTION,285,315,100,15,SS_CENTERIMAGE | 
+                    SS_SUNKEN | NOT WS_GROUP
+    CONTROL         "Slider2",IDC_SLIDER_TAGGING,"msctls_trackbar32",
+                    TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,390,315,75,15,
+                    WS_EX_STATICEDGE
+    CTEXT           "Ta",IDC_TEXT_AGENT_TAGGED,470,315,15,15,SS_CENTERIMAGE | 
+                    SS_SUNKEN | NOT WS_GROUP
+    CONTROL         "TAG",IDC_CHECK_TAGGING,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,490,310,30,10
+    CONTROL         "FOV",IDC_CHECK_FOV,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,490,320,30,10
+    GROUPBOX        "Object Reference",IDC_LEGEND,100,260,175,75,BS_CENTER
+    CTEXT           "Mouse Cursor Object Quantity",IDC_STATIC,110,320,110,10,
+                    SS_CENTERIMAGE | SS_SUNKEN | NOT WS_GROUP
+    CTEXT           "Qu",IDC_TEXT_OBJ_QUANTITY,230,320,35,10,SS_CENTERIMAGE | 
+                    SS_SUNKEN | NOT WS_GROUP
+    GROUPBOX        "Frame Position",IDC_STATIC,5,260,90,25,BS_CENTER
+    CTEXT           "Curr",IDC_C_FRAME,15,270,30,10,NOT WS_GROUP
+    CTEXT           "of",IDC_STATIC4,45,270,10,10
+    CTEXT           "Max",IDC_M_FRAME,55,270,30,10,NOT WS_GROUP
+    GROUPBOX        "System Status",IDC_STATIC,5,290,90,25,BS_CENTER
+    CTEXT           "Waiting for User",IDC_STATUS,10,300,80,10,NOT WS_GROUP
+    PUSHBUTTON      "Exit Animate",IDC_BUTTON_EXIT_APP,5,320,90,15,BS_CENTER | 
+                    BS_VCENTER,WS_EX_CLIENTEDGE | WS_EX_STATICEDGE
+    EDITTEXT        IDC_EDIT_MAX_STOM,395,210,30,10,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    LTEXT           "Maximum Stomach Capacity",IDC_STATIC,295,210,95,10,NOT 
+                    WS_GROUP
+    EDITTEXT        IDC_EDIT_INIT_STOM,395,225,30,10,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    LTEXT           "Initial Stomach Capacity",IDC_STATIC,295,225,90,10,NOT 
+                    WS_GROUP
+    LTEXT           "Select Frame",IDC_STATIC,290,65,45,10,SS_CENTERIMAGE | 
+                    NOT WS_GROUP
+    LTEXT           "Highlight Densities",IDC_STATIC,410,65,65,10,
+                    SS_CENTERIMAGE | NOT WS_GROUP
+    EDITTEXT        IDC_EDIT_DENSE,480,65,30,12,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         226,IDC_STATIC,"Static",SS_BITMAP | SS_CENTERIMAGE | 
+                    SS_REALSIZEIMAGE | SS_SUNKEN,110,270,155,45,
+                    WS_EX_STATICEDGE
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "Not for commercial or third-party use.\0"
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "Animate MFC Application\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "Animate\0"
+            VALUE "LegalCopyright", "Copyright (C) 1999, Paul Tinsley\0"
+            VALUE "OriginalFilename", "Animate.EXE\0"
+            VALUE "ProductName", "Animate Application\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 380
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 179
+    END
+
+    IDD_ANIMATE_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 525
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 336
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUTBOX            "&About Animate..."
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.K.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENG)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_UK
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_MAP_EDITING DIALOGEX 0, 0, 432, 295
+STYLE DS_MODALFRAME | DS_3DLOOK | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Animate : Map Editor"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "",IDC_STATIC,5,0,270,255
+    PUSHBUTTON      "Cancel",IDCANCEL,365,5,30,14
+    PUSHBUTTON      "OK",ID_BUTTON_OK,400,5,25,14
+    CONTROL         "Load",IDC_LOAD_GRID,"Button",BS_OWNERDRAW | WS_TABSTOP,
+                    285,5,25,20
+    CONTROL         "Save",IDC_SAVE_GRID,"Button",BS_OWNERDRAW | WS_TABSTOP,
+                    320,5,25,20
+    GROUPBOX        "Map Objects and Functions",IDC_STATIC,280,30,145,140,
+                    BS_CENTER
+    CONTROL         "Obstacle",IDC_RADIO_OBSTACLES,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,285,50,45,10
+    CTEXT           "Ob",IDC_TEXT_OBSTACLES,330,50,25,10,NOT WS_GROUP
+    CONTROL         "Rand",IDC_RAND_OBSTACLES,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,360,45,25,20
+    CONTROL         "Clear",IDC_CLEAR_OBSTACLES,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,390,45,25,20
+    CONTROL         "Mineral",IDC_RADIO_MINERALS,"Button",BS_AUTORADIOBUTTON,
+                    285,75,40,10
+    CTEXT           "Mi",IDC_TEXT_MINERALS,330,75,25,10,NOT WS_GROUP
+    CONTROL         "Rand",IDC_RAND_MINERALS,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,360,70,25,20
+    CONTROL         "Clear",IDC_CLEAR_MINERALS,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,390,70,25,20
+    CONTROL         "Ore",IDC_RADIO_ORE,"Button",BS_AUTORADIOBUTTON,285,100,
+                    40,10
+    CTEXT           "Or",IDC_TEXT_ORE,330,100,25,10,NOT WS_GROUP
+    CONTROL         "Rand",IDC_RAND_ORE,"Button",BS_OWNERDRAW | WS_TABSTOP,
+                    360,95,25,20
+    CONTROL         "Clear",IDC_CLEAR_ORE,"Button",BS_OWNERDRAW | WS_TABSTOP,
+                    390,95,25,20
+    CONTROL         "Home",IDC_RADIO_HOMES,"Button",BS_AUTORADIOBUTTON,285,
+                    125,40,10
+    CTEXT           "Ho",IDC_TEXT_HOMES,330,125,25,10,NOT WS_GROUP
+    CONTROL         "Clear",IDC_CLEAR_HOMES,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,390,120,25,20
+    CONTROL         "Set Mineral / Ore value",IDC_RADIO_SET_QUANTITY,"Button",
+                    BS_AUTORADIOBUTTON,285,150,90,10
+    CONTROL         "Rand",IDC_RAND_QUANTITY,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,390,145,25,20
+    GROUPBOX        "Value Settings",IDC_STATIC,280,175,145,115,BS_CENTER
+    CTEXT           "Coordinates",IDC_STATIC,290,190,55,10,SS_CENTERIMAGE | 
+                    SS_SUNKEN | NOT WS_GROUP
+    CTEXT           "Object Quantity",IDC_STATIC,350,190,65,10,
+                    SS_CENTERIMAGE | SS_SUNKEN | NOT WS_GROUP
+    LTEXT           "X:",IDC_STATIC,290,205,10,10,NOT WS_GROUP
+    CTEXT           "Static",IDC_TEXT_X,300,205,10,10,NOT WS_GROUP
+    LTEXT           "Y:",IDC_STATIC,325,205,10,10,NOT WS_GROUP
+    CTEXT           "Static",IDC_TEXT_Y,335,205,10,10,NOT WS_GROUP
+    EDITTEXT        IDC_EDIT_SEE_QUANTITY,365,205,30,12,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "Random Coefficient",IDC_STATIC,290,225,70,10,NOT 
+                    WS_GROUP
+    EDITTEXT        IDC_EDIT_RAND_MIN,365,225,30,10,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_NUMBER
+    LTEXT           "Random Maximum",IDC_STATIC,290,240,65,10,NOT WS_GROUP
+    EDITTEXT        IDC_EDIT_RAND_MAX,365,240,30,10,ES_CENTER | 
+                    ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "Level",IDC_BUTTON_LEVEL_QUAN,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,290,260,25,20
+    CONTROL         "Validate",IDC_BUTTON_VALIDATE,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,330,260,25,20
+    CONTROL         "Reset",IDC_RESET_ALL_MAP,"Button",BS_OWNERDRAW | 
+                    WS_TABSTOP,5,260,25,20
+    CTEXT           "Mineral Worth",IDC_STATIC,40,260,50,10,SS_CENTERIMAGE | 
+                    SS_SUNKEN | NOT WS_GROUP
+    CTEXT           "mw",IDC_TEXT_MIN_WORTH,95,260,35,10,SS_CENTERIMAGE | 
+                    SS_SUNKEN | NOT WS_GROUP
+    CTEXT           "Ore Worth",IDC_STATIC,40,280,50,10,SS_CENTERIMAGE | 
+                    SS_SUNKEN | NOT WS_GROUP
+    CTEXT           "ow",IDC_TEXT_ORE_WORTH,95,280,35,10,SS_CENTERIMAGE | 
+                    SS_SUNKEN | NOT WS_GROUP
+    CTEXT           "Total Worth",IDC_STATIC,155,260,50,10,SS_CENTERIMAGE | 
+                    SS_SUNKEN | NOT WS_GROUP
+    CTEXT           "tw",IDC_TEXT_TOTAL_WORTH,210,260,50,10,SS_CENTERIMAGE | 
+                    SS_SUNKEN | NOT WS_GROUP
+    CONTROL         "Illustrate Search Paths",IDC_CHECK_PATHS,"Button",
+                    BS_AUTOCHECKBOX | BS_CENTER | WS_TABSTOP,155,275,105,15,
+                    WS_EX_DLGMODALFRAME | WS_EX_STATICEDGE
+    CONTROL         "Set Start Positions",IDC_CHECK_STARTS,"Button",
+                    BS_AUTOCHECKBOX | BS_CENTER | BS_VCENTER | BS_MULTILINE | 
+                    WS_TABSTOP,365,260,45,20
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_MAP_EDITING, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 425
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 288
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif\r\n"
+    "#include ""res\\Animate.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\Animate.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_PAUL                BITMAP  DISCARDABLE     "res\\paul.bmp"
+PLAYD                   BITMAP  DISCARDABLE     "res\\play_down.bmp"
+PLAYU                   BITMAP  DISCARDABLE     "res\\play_up.bmp"
+STOPU                   BITMAP  DISCARDABLE     "res\\stop_up.bmp"
+STOPD                   BITMAP  DISCARDABLE     "res\\stop_down.bmp"
+STEP_FU                 BITMAP  DISCARDABLE     "res\\step_f_up.bmp"
+STEP_FD                 BITMAP  DISCARDABLE     "res\\step_f_down.bmp"
+STEP_BU                 BITMAP  DISCARDABLE     "res\\step_b_up.bmp"
+STEP_BD                 BITMAP  DISCARDABLE     "res\\step_b_down.bmp"
+RESET_BU                BITMAP  DISCARDABLE     "res\\reset_begin_up.bmp"
+RESET_BD                BITMAP  DISCARDABLE     "res\\reset_begin_down.bmp"
+RESET_FU                BITMAP  DISCARDABLE     "res\\reset_end_up.bmp"
+RESET_FD                BITMAP  DISCARDABLE     "res\\reset_end_down.bmp"
+PATHU                   BITMAP  DISCARDABLE     "res\\path_up.bmp"
+PATHD                   BITMAP  DISCARDABLE     "res\\path_down.bmp"
+LOADU                   BITMAP  DISCARDABLE     "res\\load_up.bmp"
+LOADD                   BITMAP  DISCARDABLE     "res\\load_down.bmp"
+SAVEU                   BITMAP  DISCARDABLE     "res\\save_up.bmp"
+SAVED                   BITMAP  DISCARDABLE     "res\\save_down.bmp"
+MAPU                    BITMAP  DISCARDABLE     "res\\editor_up.bmp"
+MAPD                    BITMAP  DISCARDABLE     "res\\editor_down.bmp"
+RUNU                    BITMAP  DISCARDABLE     "res\\run_up.bmp"
+RUND                    BITMAP  DISCARDABLE     "res\\run_down.bmp"
+RUNAU                   BITMAP  DISCARDABLE     "res\\run_anim_up.bmp"
+RUNAD                   BITMAP  DISCARDABLE     "res\\run_anim_down.bmp"
+PAUSEU                  BITMAP  DISCARDABLE     "res\\run_pause_up.bmp"
+PAUSED                  BITMAP  DISCARDABLE     "res\\run_pause_down.bmp"
+KILLU                   BITMAP  DISCARDABLE     "res\\run_abort_up.bmp"
+KILLD                   BITMAP  DISCARDABLE     "res\\run_abort_down.bmp"
+RANDU                   BITMAP  DISCARDABLE     "res\\rand_up.bmp"
+RANDD                   BITMAP  DISCARDABLE     "res\\rand_down.bmp"
+CLEARU                  BITMAP  DISCARDABLE     "res\\rubout_up.bmp"
+CLEARD                  BITMAP  DISCARDABLE     "res\\rubout_down.bmp"
+LEVELU                  BITMAP  DISCARDABLE     "res\\level_up.bmp"
+LEVELD                  BITMAP  DISCARDABLE     "res\\level_down.bmp"
+VALIDATEU               BITMAP  DISCARDABLE     "res\\valid_up.bmp"
+VALIDATED               BITMAP  DISCARDABLE     "res\\valid_down.bmp"
+RESETU                  BITMAP  DISCARDABLE     "res\\wipe_up.bmp"
+RESETD                  BITMAP  DISCARDABLE     "res\\wipe_down.bmp"
+JUMPU                   BITMAP  DISCARDABLE     "res\\jump_up.bmp"
+JUMPD                   BITMAP  DISCARDABLE     "res\\jump_down.bmp"
+PLAYF                   BITMAP  DISCARDABLE     "res\\play_focus.bmp"
+PLAYX                   BITMAP  DISCARDABLE     "res\\play_disable.bmp"
+STOPF                   BITMAP  DISCARDABLE     "res\\stop_focus.bmp"
+STOPX                   BITMAP  DISCARDABLE     "res\\stop_disable.bmp"
+STEP_FF                 BITMAP  DISCARDABLE     "res\\step_f_focus.bmp"
+STEP_FX                 BITMAP  DISCARDABLE     "res\\step_f_disable.bmp"
+STEP_BF                 BITMAP  DISCARDABLE     "res\\step_b_focus.bmp"
+STEP_BX                 BITMAP  DISCARDABLE     "res\\step_b_disable.bmp"
+RESET_BF                BITMAP  DISCARDABLE     "res\\reset_begin_focus.bmp"
+RESET_BX                BITMAP  DISCARDABLE     "res\\reset_begin_disable.bmp"
+RESET_FF                BITMAP  DISCARDABLE     "res\\reset_end_focus.bmp"
+RESET_FX                BITMAP  DISCARDABLE     "res\\reset_end_disable.bmp"
+PATHF                   BITMAP  DISCARDABLE     "res\\path_focus.bmp"
+PATHX                   BITMAP  DISCARDABLE     "res\\path_disable.bmp"
+JUMPF                   BITMAP  DISCARDABLE     "res\\jump_focus.bmp"
+JUMPX                   BITMAP  DISCARDABLE     "res\\jump_disable.bmp"
+LOADF                   BITMAP  DISCARDABLE     "res\\load_focus.bmp"
+LOADX                   BITMAP  DISCARDABLE     "res\\load_disable.bmp"
+SAVEF                   BITMAP  DISCARDABLE     "res\\save_focus.bmp"
+SAVEX                   BITMAP  DISCARDABLE     "res\\save_disable.bmp"
+MAPF                    BITMAP  DISCARDABLE     "res\\editor_focus.bmp"
+MAPX                    BITMAP  DISCARDABLE     "res\\editor_disable.bmp"
+RUNF                    BITMAP  DISCARDABLE     "res\\run_focus.bmp"
+RUNX                    BITMAP  DISCARDABLE     "res\\run_disable.bmp"
+RUNAF                   BITMAP  DISCARDABLE     "res\\run_anim_focus.bmp"
+RUNAX                   BITMAP  DISCARDABLE     "res\\run_anim_disable.bmp"
+PAUSEF                  BITMAP  DISCARDABLE     "res\\run_pause_focus.bmp"
+PAUSEX                  BITMAP  DISCARDABLE     "res\\run_pause_disable.bmp"
+KILLF                   BITMAP  DISCARDABLE     "res\\run_abort_focus.bmp"
+KILLX                   BITMAP  DISCARDABLE     "res\\run_abort_disable.bmp"
+RANDF                   BITMAP  DISCARDABLE     "res\\rand_focus.bmp"
+RANDX                   BITMAP  DISCARDABLE     "res\\rand_disable.bmp"
+CLEARF                  BITMAP  DISCARDABLE     "res\\rubout_focus.bmp"
+CLEARX                  BITMAP  DISCARDABLE     "res\\rubout_disable.bmp"
+RESETF                  BITMAP  DISCARDABLE     "res\\wipe_focus.bmp"
+RESETX                  BITMAP  DISCARDABLE     "res\\wipe_disable.bmp"
+LEVELF                  BITMAP  DISCARDABLE     "res\\level_focus.bmp"
+LEVELX                  BITMAP  DISCARDABLE     "res\\level_disable.bmp"
+VALIDATEF               BITMAP  DISCARDABLE     "res\\valid_focus.bmp"
+VALIDATEX               BITMAP  DISCARDABLE     "res\\valid_disable.bmp"
+IDB_OBJECTS             BITMAP  DISCARDABLE     "res\\objects.bmp"
+IDB_LEGEND              BITMAP  DISCARDABLE     "res\\legend.bmp"
+#endif    // English (U.K.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif
+#include "res\Animate.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
