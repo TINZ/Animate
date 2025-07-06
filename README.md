@@ -20,6 +20,8 @@ Please note that whilst I reference A* search in my report, I do not actually im
 
 EXAMPLE USAGE
 
+There is an explantory document for a basic experiment in the "Documents" folder, but you can follow the super simplified steps below too, for the fastest example run.
+
 This example is to run a simulation scenario for basic mining.
 
 1. Run Animate.exe in Windows within a folder that also includes the two DLL files, all of which are included in the "Release" folder.
