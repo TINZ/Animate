@@ -16,7 +16,7 @@ The "Release" folder includes a compiled version, together with the two .dll fil
 
 DOCUMENTATION
 
-The "Documents" folder includes my original report, which includes discussion on the experiemnts I ran and my findings. It also includes other materials related to the project.
+The "Documents" folder includes my original report, which includes discussion on the experiments I ran and my findings. It also includes other materials related to the project.
 
 Please note that whilst I reference A* search in my report, I do not actually implement A* search, but something different. I wasn't even sure what to call it at the time as I was a student and inexperienced. However, it is a very fascinating implementation of a vector field style pathfinding solution (I only found out about vector fields in 2025, as I don't work in coding) which avoids the calamities when paths are not possible. You cannot include spaces in the environment that might be accessible if an obstacle is removed. You can only work with accessible space and obstacles, not accessible space that is not accessible within obstacles. These limitations were necessary to simplify the simulation, but could be altered for more broader applications with further coding. Thus, if the search space is accesible, the agents will always find optimal paths and never get stuck looking for a path.
 
