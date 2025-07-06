@@ -8,6 +8,8 @@ The main reason why I supply the code is because the simulator may have been one
 
 THE CODE
 
+The "Source" folder contains all the cource code files.
+
 The "Resources" folder includes images for the application. All files that I originally used to compile this application using Visual Studio in 1999 are included. However, these files have never been used to generate a Visual Studio project since 1999, so some work is required to get them into a modern project structure.
 
 The "Release" folder includes a compiled version, together with the two .dll files that are required to be present within the same folder as the .exe application when the application is executed. I do not have time to provide full instructions on the operation, but within this README I have provided a sample execution of some scenarios you can run and some other tips to get you started.
