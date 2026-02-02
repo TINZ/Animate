@@ -46,3 +46,60 @@ I cannot provide help or instruction on this code to compile it or modify it, bu
 ABOUT ME
 
 My name is Paul Tinsley and I live on the island of Guernsey in the British Channel Islands. I had a career partly in software engineering, mostly creating thin-client intranets and some web facing sites too, but I have also spent many years in lots of other fields. I currently consult occasionally as a business anaylst. I have posted my project code here to ensure it isn't lost, as I was very proud of it at the time I created it and it is a fascinating little simulator.
+
+**Below is an AI generated README.md content created by Google Gemini in February 2026. Gemini did a far better job than I ever could in describing the relevance of my work:**
+
+**Animate: Emergence in Multi-Agent Systems (1999)**
+
+🏆 University Award Winner | 1st Class Honours Research
+
+A pioneering study and C++ implementation of Flow Field navigation and Emergent Intelligence.
+
+🚀 Overview
+
+Animate is a sophisticated C++ simulation environment developed in 1999 to investigate how complex global behaviors emerge from simple local rules. This project was born from the realization that traditional 1990s pathfinding (like individual A*) was too computationally expensive and "fragile" for large-scale crowd simulation.
+
+By flipping the paradigm—placing the "intelligence" in a global vector field rather than in individual agents—this project enabled the real-time coordination of massive crowds on 1990s-era hardware (Pentium II/III).
+
+**📄 The Treatise: "Emergence"**
+
+The cornerstone of this repository is the 358-page research report, an exhaustive academic study on the mechanics of agent-based simulation and the philosophy of emergence.
+
+👉 Read the Full Report: [Emergence Report.pdf](https://github.com/TINZ/Animate/blob/main/Documents/Emergence%20Report.pdf)
+
+**Key Research Outcomes:**
+
+1. The "Search Flood" Algorithm: A high-speed, optimized navigation algorithm that "flooded" the environment with path costs, allowing agents to simply sample the gradient to find the shortest route—predating the widespread use of Flow Fields in the gaming industry (e.g., Supreme Commander) by nearly a decade.
+2. Emergent Phenomena: Documented "Pack Hunting" and "Transport Chaining" (ant-like behavior) where global patterns arose without central coordination or agent-to-agent communication.
+3. System Design: A complete decoupling of Intention (Agent), Conflict Resolution (Arbitrator), and Action (Administrator), creating a deterministic and highly scalable simulation.🛠
+  
+**Technical Innovation:**
+
+**1. The Search Flood (Flow Field) Navigation**
+
+Instead of calculating paths per unit, the system discretizes the environment to generate a continuous directional map. Any agent, anywhere on the map, instantly knows its next move by sampling the local vector.
+
+**Significance:** This reduced the computational cost to a near-constant lookup time per agent after a single field generation.
+
+**2. The Arbitrator Pattern**
+
+To prevent agent overlapping and "teleportation" glitches common in 90s simulations, Animate used an Arbitrator to resolve physical conflicts before they happened.
+
+**Significance:** This allowed for "soft" collisions and realistic congestion handling without the agents needing to "know" about each other, further reducing CPU overhead.
+
+**📜 Historical Significance**
+
+This project was completed in May 1999 and was awarded 1st Class Honours and a University Award for innovation in Artificial Intelligence.
+
+At the time of its release:
+1. Most RTS games were still struggling with basic "U-shape" obstacle traps.
+2. "Emergent Intelligence" was largely a theoretical academic concept.
+3. The hardware constraints of Windows 95/98 made the performance optimization seen in the "Search Flood" algorithm essential for real-time visualization.
+
+**💻 Tech Stack**
+
+Language: C++ (Visual C++ 5.0 / 6.0)
+Graphics: Win32 GDI (No DirectX/OpenGL required)
+Architecture: Multi-Agent System (MAS) / Blackboard ArchitectureArchive
+
+This repository serves as a digital time-capsule of late-20th-century computational research.
