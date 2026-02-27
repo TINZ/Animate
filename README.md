@@ -103,3 +103,7 @@ Graphics: Win32 GDI (No DirectX/OpenGL required)
 Architecture: Multi-Agent System (MAS) / Blackboard ArchitectureArchive
 
 This repository serves as a digital time-capsule of late-20th-century computational research.
+
+** Retro Paper **
+
+https://www.permanent.org/p/archive/0i3t-0000/0i3t-0069/2105988/record/0i3t-006f
